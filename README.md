@@ -3,7 +3,7 @@
 
 Agenda:
 1. Set Role for Lambda
-copy 
+copy to IAM ROLE
 ```
 {
   "Version": "2012-10-17",
@@ -28,7 +28,7 @@ copy
   ]
 }
 ```
-to IAM ROLE
+
 
 2. Config Lambda
 3. Config SNS
