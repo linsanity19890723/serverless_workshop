@@ -21,7 +21,8 @@ copy to IAM ROLE
       "Effect": "Allow",
       "Action": [
         "ec2:Start*",
-        "ec2:Stop*"
+        "ec2:Stop*",
+        "ec2:DescribeInstances"
       ],
       "Resource": "*"
     }
