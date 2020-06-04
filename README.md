@@ -1,5 +1,7 @@
 # serverless_workshop
 
+**Purpose: Start and stop AWS EC2 instance based on a time based schedule**
+
 ## 1. Set Role for Lambda
 1. IAM>IAM POLICY>Create policy:
 	copy paste to IAM policy
