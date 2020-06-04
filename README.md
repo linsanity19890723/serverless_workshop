@@ -48,6 +48,6 @@ step:
   
 ## 4. Config Cloudwatch Event trigger
 	1. Cloudwatch Event>Create Rule>Input cron expression
-	ie.``46 07 * * ? *``
+	ie.46 07 * * ? *
 	2. Select Lambda function
  
