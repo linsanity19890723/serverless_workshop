@@ -47,4 +47,7 @@ step:
   	5. Check your email and click "Confirm" to agree the suscription
   
 ## 4. Config Cloudwatch Event trigger
+	1. Cloudwatch Event>Create Rule>Input cron expression
+	ie.``46 07 * * ? *``
+	2. Select Lambda function
  
