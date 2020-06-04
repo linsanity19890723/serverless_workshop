@@ -36,15 +36,15 @@ step:
 
 2. IAM ROLE>Create an IAM ROL>Attach the Policy to the Role
 
-2. Config Lambda:
+## 2. Config Lambda:
 	1. Select Python3.7
 	2. Select Existing Role
-3. Config SNS:
+## 3. Config SNS:
   	1. Amazon SNS>Topics>Create topic
   	2. Subscriptions>Create subscription
   	3. Select Protocol to "Email"
   	4. Input the email to "Endpoint"
   	5. Check your email and click "Confirm" to agree the suscription
   
-4. Config Cloudwatch Event trigger
+## 4. Config Cloudwatch Event trigger
  
