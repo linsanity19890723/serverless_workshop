@@ -3,8 +3,7 @@
 
 Agenda:
 ## 1. Set Role for Lambda
-step:
-	1. IAM>IAM POLICY>Create policy
+1. IAM>IAM POLICY>Create policy:
 	copy paste to IAM policy
  ```
 {
@@ -33,7 +32,6 @@ step:
  ```
 
 
-
 2. IAM ROLE>Create an IAM ROL>Attach the Policy to the Role
 
 ## 2. Config Lambda:
@@ -48,6 +46,6 @@ step:
   
 ## 4. Config Cloudwatch Event trigger
 	1. Cloudwatch Event>Create Rule>Input cron expression
-	ie.46 07 * * ? *
+	ie. 46 07 * * ? *
 	2. Select Lambda function
  
