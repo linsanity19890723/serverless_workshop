@@ -1,7 +1,5 @@
 # serverless_workshop
 
-
-Agenda:
 ## 1. Set Role for Lambda
 1. IAM>IAM POLICY>Create policy:
 	copy paste to IAM policy
