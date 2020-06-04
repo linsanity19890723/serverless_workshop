@@ -46,7 +46,7 @@ def instance_start():
 def sns_publish(message):
     client = boto3.client('sns')
     response = client.publish(
-        TopicArn='arn:aws:sns:ap-northeast-1:849700601919:sendmail',
+        TopicArn='arn:aws:sns:ap-northeast-1:youracountnumber:sendmail',
         Message=message,
         Subject='['+os.environ['instanceid']+']:startup_instance'
     )
