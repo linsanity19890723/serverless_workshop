@@ -4,7 +4,7 @@
 Agenda:
 ## 1. Set Role for Lambda
 step:
-	1. IAM→IAM POLICY→Create policy
+	1. IAM>IAM POLICY>Create policy
 	copy paste to IAM policy
  ```
 {
@@ -34,11 +34,11 @@ step:
 
 
 
-2. IAM ROLE→Create an IAM ROLE→Attach the Policy to the Role
+2. IAM ROLE>Create an IAM ROL>Attach the Policy to the Role
 
 2. Config Lambda:
-		1. Select Python3.7
-		2. Select Existing Role
+	1. Select Python3.7
+	2. Select Existing Role
 3. Config SNS:
   	1. Amazon SNS>Topics>Create topic
   	2. Subscriptions>Create subscription
