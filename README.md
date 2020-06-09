@@ -30,7 +30,7 @@
         {
             "Effect": "Allow",
             "Action": "sns:Publish",
-            "Resource": "arn:aws:sns:ap-northeast-1:849700601919:NotifyToOperation"
+            "Resource": "arn:aws:sns:*:*:*"
         }
     ]
 }
