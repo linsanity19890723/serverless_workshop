@@ -7,7 +7,7 @@ import datetime
 def lambda_handler(event, context):
     instance_start()
 def instance_start():
-        ec2 = boto3.client('ec2', region_name='ap-northeast-1')
+        ec2 = boto3.client('ec2', region_name='us-east-2')
         desc = ec2.describe_instances(Filters=[{'Name': 'tag:project', "Values": ['Auto']}])
 
         targets = []
@@ -49,5 +49,5 @@ def sns_publish(message):
     response = client.publish(
         TopicArn='arn:aws:sns:ap-northeast-1:youracountnumber:sendmail',
         Message=message,
-        Subject='['+os.environ['instanceid']+']:startup_instance'
+        Subject='['+os.environ['instanceid']+']:stop_instance'
     )
