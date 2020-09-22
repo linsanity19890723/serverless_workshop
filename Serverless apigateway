@@ -1,0 +1,38 @@
+from __future__ import print_function
+import boto3
+import json
+from datetime import datetime
+import random
+import subprocess
+
+
+print('Loading function')
+
+
+
+def lambda_handler(event, context):
+        boto3.set_stream_logger('')
+        #result = []
+        for record in event['Records']:
+            print ("test")
+            payload=record["body"]
+            print(str(payload))
+
+            result = json.loads(payload)
+
+            # file_path = '/tmp/' + 'test_' + datetime.now().strftime('%Y-%m-%d-%H-%M-%S-') + str(random.randint(0,999999)) + '.json'
+            file_path = '/tmp/' + 'test_' + datetime.now().strftime('%Y-%m-%d-%H-%M-%S-') + str(random.randint(0,999999)) + '.json'
+            print(json.dumps(result), file=open(file_path, 'a+'))
+            try:
+
+                client = boto3.client('s3')
+                bucketname = 'jsontestndcc'
+                #keyname = datetime.now().strftime('%Y-%m-%d-%H-%M') + '/' + 'test_' + datetime.now().strftime('%Y-%m-%d-%H-%M-%S-') + str(random.randint(0,999999)) + '.json'
+                keyname = 'test_' + datetime.now().strftime('%Y-%m-%d-%H-%M-%S-') + str(random.randint(0,999999)) + '.json'
+                
+                with open(file_path) as f : 
+                    object_data = f.read()
+                    client.put_object(Body=object_data, Bucket=bucketname, Key=keyname)
+
+            except Exception as e:
+                print(e)
